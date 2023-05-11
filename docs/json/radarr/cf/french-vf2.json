@@ -1,24 +1,25 @@
 {
-  "trash_id": "a5d148168c4506b55cf53984107c396e",
-  "name": "10bit",
-  "includeCustomFormatWhenRenaming": false,
+  "trash_id": "29b5f7b1a5f20f64228786c3ab1bdc7d",
+  "trash_regex": "https://regex101.com/r/qgQMab/1",
+  "name": "VF2",
+  "includeCustomFormatWhenRenaming": true,
   "specifications": [
     {
-      "name": "10bit",
+      "name": "VF2",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "10[.-]?bit"
+        "value": "\\b(VF2)\\b"
       }
     },
     {
-      "name": "hi10p",
+      "name": "Both VFF and VFQ",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "hi10p"
+        "value": "\\b(VF(F|Q)[ .]VF(F|Q))\\b"
       }
     }
   ]
