@@ -1,6 +1,8 @@
 {
   "trash_id": "9c14d194486c4014d422adc64092d794",
-  "trash_score": "-10000",
+  "trash_scores": {
+    "default": -10000
+  },
   "name": "Dubs Only",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -10,7 +12,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub"
+        "value": "^(?!.*(Dual|Multi)[-_. ]?Audio).*((?<!multi-)\\b(dub(bed)?)\\b|(funi|eng(lish)?)_?dub)"
       }
     },
     {
@@ -23,12 +25,12 @@
       }
     },
     {
-      "name": "KaiDubs",
+      "name": "KaiDubs (Not Dual Audio)",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\b(KaiDubs)\\b"
+        "value": "^(?!.*(dual[ ._-]?audio|[([]dual[])]|(JA|ZH|KO)\\+EN|EN\\+(JA|ZH|KO))).*\\b(KaiDubs)\\b"
       }
     },
     {
@@ -46,7 +48,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "^(?!.*Dual[-_. ]?Audio).*\\bKS\\b"
+        "value": "^(?!.*(dual[ ._-]?audio|[([]dual[])]|(JA|ZH|KO)\\+EN|EN\\+(JA|ZH|KO))).*\\bKS\\b"
       }
     },
     {

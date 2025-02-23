@@ -1,6 +1,8 @@
 {
   "trash_id": "4fd5528a3a8024e6b49f9c67053ea5f3",
-  "trash_score": "300",
+  "trash_scores": {
+    "default": 300
+  },
   "name": "Anime Web Tier 04 (Official Subs)",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -119,6 +121,24 @@
       "required": false,
       "fields": {
         "value": "\\b(URANIME)\\b"
+      }
+    },
+    {
+      "name": "VARYG",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(VARYG)\\b"
+      }
+    },
+    {
+      "name": "ZigZag",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\[ZigZag\\]|-ZigZab\b"
       }
     }
   ]

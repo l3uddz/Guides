@@ -3,10 +3,19 @@ site_description: Guides mainly for Sonarr/Radarr/Bazarr and everything related 
 site_author: TRaSH
 site_url: https://trash-guides.info/
 
-repo_url: https://github.com/TRaSH-/Guides
-repo_name: TRaSH-/Guides
+repo_url: https://github.com/TRaSH-Guides/Guides
+repo_name: TRaSH-Guides
 
-copyright: Copyright &copy; 2022 TRaSH
+# ignores absolute warnings we have
+# warns on missing/broken links
+validation:
+  omitted_files: warn
+  not_found: warn
+  absolute_links: ignore
+# fails to build on warnings
+strict: true
+
+copyright: Copyright &copy; 2024 TRaSH
 
 extra:
   analytics:
@@ -16,20 +25,29 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://trash-guides.info/discord
     - icon: fontawesome/brands/square-github
-      link: https://github.com/TRaSH-/Guides
+      link: https://github.com/TRaSH-Guides/Guides
 
 extra_css:
   - stylesheets/extra.css
   - stylesheets/github-permalink-style.css
 
+extra_javascript:
+  - js/hide_announce.js
+
 markdown_extensions:
+  - abbr # used for Tooltips
+  - attr_list
+  - md_in_html # used for Annotations
   - admonition
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.extra
   - pymdownx.highlight:
       guess_lang: true
@@ -38,9 +56,15 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tabbed
   - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - toc:
       permalink: ""
-      toc_depth: 5
+#      toc_depth: 5
 
 plugins:
   - include-markdown:
@@ -52,7 +76,8 @@ plugins:
   - git-revision-date-localized:
       type: datetime
       locale: en
-  #    fallback_to_build_date: false
+      fallback_to_build_date: true
+      enable_creation_date: true
   - awesome-pages
   - glightbox:
       touchNavigation: true
@@ -71,29 +96,47 @@ plugins:
       j2_variable_end_string: "]]"
   - redirects:
       redirect_maps:
-        updates.txt: updates.txt
+        #updates.txt: updates.txt
         discord.md: https://discord.gg/4K2kdvwzFh
         syno-script.md: https://github.com/TRaSH-/Guides-Synology-Templates/blob/main/script/trash_syno_installer.sh
         # Radarr redirects
         Radarr/Radarr-setup-custom-formats.md: Radarr/radarr-setup-quality-profiles.md
         Radarr/radarr-setup-custom-formats-anime.md: Radarr/radarr-setup-quality-profiles-anime.md
         Radarr/radarr-setup-custom-formats-french.md: Radarr/radarr-setup-quality-profiles-french-en.md
+        Radarr/Radarr-remote-path-mapping.md: Radarr/Tips/Radarr-remote-path-mapping.md
         # Sonarr redirects
         Sonarr/sonarr-setup-custom-formats.md: Sonarr/sonarr-setup-quality-profiles.md
         Sonarr/sonarr-setup-custom-formats-anime.md: Sonarr/sonarr-setup-quality-profiles-anime.md
+        Sonarr/Sonarr-Release-Profile-RegEx.md: Sonarr/sonarr-v3-eol.md
+        Sonarr/Sonarr-Release-Profile-RegEx-Anime.md: Sonarr/sonarr-v3-eol.md
+        Sonarr/Sonarr-remote-path-mapping.md: Sonarr/Tips/Sonarr-remote-path-mapping.md
         # How to old redirects
-        How-to-setup-for/index.md: Hardlinks/How-to-setup-for/index.md
-        How-to-setup-for/Docker.md: Hardlinks/How-to-setup-for/Docker.md
-        How-to-setup-for/Dockstarter.md: Hardlinks/How-to-setup-for/Dockstarter.md
-        How-to-setup-for/Native.md: Hardlinks/How-to-setup-for/Native.md
-        How-to-setup-for/Synology.md: Hardlinks/How-to-setup-for/Synology.md
-        How-to-setup-for/Unraid.md: Hardlinks/How-to-setup-for/Unraid.md
+        How-to-setup-for/index.md: File-and-Folder-Structure/How-to-set-up/index.md
+        How-to-setup-for/Docker.md: File-and-Folder-Structure/How-to-set-up/Docker.md
+        How-to-setup-for/Dockstarter.md: File-and-Folder-Structure/How-to-set-up/Dockstarter.md
+        How-to-setup-for/Native.md: File-and-Folder-Structure/How-to-set-up/Native.md
+        How-to-setup-for/Synology.md: File-and-Folder-Structure/How-to-set-up/Synology.md
+        How-to-setup-for/Unraid.md: File-and-Folder-Structure/How-to-set-up/Unraid.md
+        # Hardlink to File-and-Folder-Structure redirects
+        Hardlinks/Check-if-hardlinks-are-working.md: File-and-Folder-Structure/Check-if-hardlinks-are-working.md
+        Hardlinks/Examples.md: File-and-Folder-Structure/Examples.md
+        Hardlinks/Hardlinks-and-Instant-Moves.md: File-and-Folder-Structure/Hardlinks-and-Instant-Moves.md
+        Hardlinks/index.md: File-and-Folder-Structure/index.md
+        Hardlinks/Replace-copies-with-hardlinks.md: File-and-Folder-Structure/Replace-copies-with-hardlinks.md
+        Hardlinks/How-to-setup-for/Docker.md: File-and-Folder-Structure/How-to-set-up/Docker.md
+        Hardlinks/How-to-setup-for/Dockstarter.md: File-and-Folder-Structure/How-to-set-up/Dockstarter.md
+        Hardlinks/How-to-setup-for/index.md: File-and-Folder-Structure/How-to-set-up/index.md
+        Hardlinks/How-to-setup-for/Native.md: File-and-Folder-Structure/How-to-set-up/Native.md
+        Hardlinks/How-to-setup-for/Synology.md: File-and-Folder-Structure/How-to-set-up/Synology.md
+        Hardlinks/How-to-setup-for/TrueNAS-Core.md: File-and-Folder-Structure/How-to-set-up/TrueNAS-Core.md
+        Hardlinks/How-to-setup-for/Unraid.md: File-and-Folder-Structure/How-to-set-up/Unraid.md
+        Hardlinks/How-to-setup-for/Windows.md: File-and-Folder-Structure/How-to-set-up/Windows.md
         # Random redirects
         Misc/trash-sync.md: Guide-Sync/index.md
         # Shortcuts redirects
-        hardlinks.md: Hardlinks/Hardlinks-and-Instant-Moves.md
-        hardlink.md: Hardlinks/Hardlinks-and-Instant-Moves.md
-        check-hardlinks.md: Hardlinks/Check-if-hardlinks-are-working.md
+        hardlinks.md: File-and-Folder-Structure/Hardlinks-and-Instant-Moves.md
+        hardlink.md: File-and-Folder-Structure/Hardlinks-and-Instant-Moves.md
+        check-hardlinks.md: File-and-Folder-Structure/Check-if-hardlinks-are-working.md
         custom-formats.md: Radarr/Radarr-collection-of-custom-formats.md
         cf.md: Radarr/Radarr-collection-of-custom-formats.md
         TorGuard.md: Misc/How-to-setup-Torguard-for-port-forwarding.md
@@ -102,7 +145,12 @@ plugins:
         Golden-Rule.md: Misc/x265-4k.md
         show-unknown.md: Radarr/Tips/Radarr-show-unknown-movie-items.md
         merge-quality.md: Radarr/Tips/Merge-quality.md
-        jdupes.md: Hardlinks/Replace-copies-with-hardlinks.md
+        jdupes.md: File-and-Folder-Structure/Replace-copies-with-hardlinks.md
+        # Recyclarr redirects
+        Recyclarr/recyclarr-configs.md: https://recyclarr.dev/wiki/guide-configs/
+        Recyclarr/recyclarr-configs-sqp.md: https://recyclarr.dev/wiki/sqp-configs/
+        # Downloaders redirects
+        Downloaders/qBittorrent/3rd-party-tools.md: Downloaders/3rd-party-tools.md
 
 theme:
   name: material
@@ -114,6 +162,7 @@ theme:
     - content.code.copy
     - content.action.edit
     - content.action.view
+    - content.tooltips
   language: en
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -135,3 +184,5 @@ theme:
     code: "Encode Sans Expanded"
   favicon: img/favicon.png
   logo: img/logo.png
+  icon:
+    annotation: circle-question

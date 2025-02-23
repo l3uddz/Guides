@@ -2,6 +2,8 @@ name: Validate Metadata JSON
 
 on:
   push:
+    branches:
+      - master
     paths:
       - metadata.json
       - metadata.schema.json
@@ -17,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Validate metadata.json
     steps:
-      - uses: actions/checkout@v3.5.2
-      - uses: actions/setup-python@v4.6.0
+      - uses: actions/checkout@v4.1.6
+      - uses: actions/setup-python@v5.4.0
         with:
-          python-version: "3.x"
+          python-version: 3.x
       - run: pip install jsonschema
       - run: jsonschema -i metadata.json metadata.schema.json

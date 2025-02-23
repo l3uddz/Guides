@@ -1,6 +1,10 @@
 {
   "trash_id": "9965a052eb87b0d10313b1cea89eb451",
-  "trash_score": "1900",
+  "trash_scores": {
+    "default": 1900,
+    "anime-sonarr": 1050,
+    "french-multi-vf": 0
+  },
   "name": "Remux Tier 01",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -47,15 +51,6 @@
       "required": false,
       "fields": {
         "value": "^(PmP)$"
-      }
-    },
-    {
-      "name": "SiCFoI",
-      "implementation": "ReleaseGroupSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": "^(SiCFoI)$"
       }
     }
   ]

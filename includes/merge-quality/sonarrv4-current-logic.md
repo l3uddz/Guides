@@ -1,6 +1,6 @@
 ### Sonarr v4 current logic
 
-??? abstract "Sonarr v4 current logic - [CLICK TO EXPAND]"
+??? abstract "Sonarr v4 current logic - [Click to show/hide]"
 
     As of v4 release the logic is as follows:
 
@@ -19,6 +19,7 @@
     [Source: Wiki Servarr](https://wiki.servarr.com/sonarr/faq#how-are-possible-downloads-compared){:target="_blank" rel="noopener noreferrer"}
 
     !!! warning ""
+
         REPACKS and PROPERs are v2 of Qualities and thus rank above a non-repack of the same quality.
 
-         `Settings` => `Media Management` => `File Management` => `Proper & Repacks` Change to `Do Not Prefer` and use the [Repack/Proper Custom Format](/Sonarr/Sonarr-collection-of-custom-formats/#repackproper){:target="_blank" rel="noopener noreferrer"}
+        `Settings` => `Media Management` => `File Management` => `Proper & Repacks` Change to `Do Not Prefer` and use the [Repack/Proper Custom Format](/Sonarr/sonarr-collection-of-custom-formats/#repackproper){:target="_blank" rel="noopener noreferrer"}

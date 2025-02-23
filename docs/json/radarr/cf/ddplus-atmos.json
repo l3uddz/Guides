@@ -1,6 +1,11 @@
 {
   "trash_id": "1af239278386be2919e1bcee0bde047e",
-  "trash_score": "3000",
+  "trash_scores": {
+    "default": 3000,
+    "sqp-1-1080p": 135,
+    "sqp-1-web-1080p": 135,
+    "sqp-1-2160p": 135
+  },
   "name": "DD+ ATMOS",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -10,7 +15,7 @@
       "negate": false,
       "required": true,
       "fields": {
-        "value": "\\bDD[P+]|\\b(e[-_. ]?ac3)\\b"
+        "value": "\\bDD[P+]|\\b(e[-_. ]?ac-?3)\\b"
       }
     },
     {
@@ -46,7 +51,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\bDD[^a-z+]|(?<!e)ac3"
+        "value": "\\bDD[^a-z+]|(?<!e-)\\b(ac-?3)\\b"
       }
     },
     {

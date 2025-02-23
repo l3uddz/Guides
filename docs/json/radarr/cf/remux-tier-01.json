@@ -1,6 +1,10 @@
 {
   "trash_id": "3a3ff47579026e76d6504ebea39390de",
-  "trash_score": "1900",
+  "trash_scores": {
+    "default": 1950,
+    "anime-radarr": 1050,
+    "french-multi-vf": 0
+  },
   "name": "Remux Tier 01",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -50,6 +54,15 @@
       }
     },
     {
+      "name": "CiNEPHiLES",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(CiNEPHiLES)$"
+      }
+    },
+    {
       "name": "FraMeSToR",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -65,15 +78,6 @@
       "required": false,
       "fields": {
         "value": "^(PmP)$"
-      }
-    },
-    {
-      "name": "SiCFoI",
-      "implementation": "ReleaseGroupSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": "^(SiCFoI)$"
       }
     },
     {

@@ -1,6 +1,9 @@
 {
   "trash_id": "9c11cd3f07101cdba90a2d81cf0e56b4",
-  "trash_score": "-10000",
+  "trash_scores": {
+    "default": -10000,
+    "german": -35000
+  },
   "name": "LQ",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -20,6 +23,33 @@
       "required": false,
       "fields": {
         "value": "^(CHX)$"
+      }
+    },
+    {
+      "name": "CTFOH",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(CTFOH)$"
+      }
+    },
+    {
+      "name": "d3g",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(d3g)$"
+      }
+    },
+    {
+      "name": "DepraveD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(DepraveD)$"
       }
     },
     {
@@ -59,12 +89,39 @@
       }
     },
     {
+      "name": "iNTENSO",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(iNTENSO)$"
+      }
+    },
+    {
+      "name": "iVy",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(iVy)$"
+      }
+    },
+    {
       "name": "JFF",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
         "value": "^(JFF)$"
+      }
+    },
+    {
+      "name": "KC",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(KC)$"
       }
     },
     {
@@ -77,15 +134,6 @@
       }
     },
     {
-      "name": "NERO",
-      "implementation": "ReleaseGroupSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": "^(NERO)$"
-      }
-    },
-    {
       "name": "nhanc3",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -95,12 +143,21 @@
       }
     },
     {
+      "name": "OFT",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(OFT)$"
+      }
+    },
+    {
       "name": "Pahe",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "Pahe\\.(ph|in)\\b"
+        "value": "Pahe(\\.(ph|in))?\\b"
       }
     },
     {
@@ -110,6 +167,33 @@
       "required": false,
       "fields": {
         "value": "^(PSA)$"
+      }
+    },
+    {
+      "name": "SasukeducK",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(SasukeducK)$"
+      }
+    },
+    {
+      "name": "SHD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(SHD)$"
+      }
+    },
+    {
+      "name": "ShieldBearer",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(ShieldBearer)$"
       }
     },
     {
@@ -155,6 +239,15 @@
       "required": false,
       "fields": {
         "value": "^(XLF)$"
+      }
+    },
+    {
+      "name": "Zero00",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(Zero00)$"
       }
     }
   ]

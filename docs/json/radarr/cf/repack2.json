@@ -1,6 +1,8 @@
 {
   "trash_id": "ae43b294509409a6a13919dedd4764c4",
-  "trash_score": "12",
+  "trash_scores": {
+    "default": 6
+  },
   "trash_regex": "https://regex101.com/r/kQ4oeP/1",
   "name": "Repack2",
   "includeCustomFormatWhenRenaming": false,
@@ -21,6 +23,15 @@
       "required": false,
       "fields": {
         "value": "\\b(Proper2)\\b"
+      }
+    },
+    {
+      "name": "RealProperRepack",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(REAL\\.(PROPER|REPACK))\\b"
       }
     }
   ]

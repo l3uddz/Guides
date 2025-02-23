@@ -1,6 +1,11 @@
 {
   "trash_id": "3cafb66171b47f226146a0770576870f",
-  "trash_score": "2750",
+  "trash_scores": {
+    "default": 2750,
+    "sqp-1-1080p": -10000,
+    "sqp-1-web-1080p": -10000,
+    "sqp-1-2160p": -10000
+  },
   "name": "TrueHD",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -28,7 +33,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\bDD[P+]|\\b(e[-_. ]?ac3)\\b"
+        "value": "\\bDD[P+]|\\b(e[-_. ]?ac-?3)\\b"
       }
     },
     {
@@ -55,7 +60,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\bDD[^a-z+]|(?<!e)ac3"
+        "value": "\\bDD[^a-z+]|(?<!e-)\\b(ac-?3)\\b"
       }
     },
     {
@@ -64,7 +69,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "CtrlHD|W4NK3R|\\bDON\\b"
+        "value": "\\b(CtrlHD|W4NK3R|DON)\\b"
       }
     }
   ]

@@ -1,39 +1,63 @@
-name: Build mkdocs and deploy to GitHub Pages
+name: Build and Deploy Docs
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-
   build:
-    name: Build docs
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3.5.2
-      - uses: actions/setup-python@v4.6.0
-        with:
-          python-version: 3.x
-      - uses: actions/cache@v3.3.1
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install -r docs/requirements.txt
-      - run: mkdocs build
-
-  deploy:
-    if: github.event_name == 'push' && contains(fromJson('["refs/heads/master", "refs/heads/main"]'), github.ref)
-    needs: build
     name: Deploy docs
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v3.5.2
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.6
         with:
-          fetch-depth: '0'
-      - uses: actions/setup-python@v4.6.0
+          fetch-depth: 0
+          sparse-checkout: |
+            docs
+            images
+            includes
+            overrides
+
+      - name: Setup python
+        uses: actions/setup-python@v5.4.0
         with:
           python-version: 3.x
-      - uses: actions/cache@v3.3.1
+
+      - name: Get pip cache directory
+        id: pip-cache
+        run: |
+          echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache dependencies
+        uses: actions/cache@v4.2.0
         with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install -r docs/requirements.txt
-      - run: mkdocs gh-deploy --force
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -r docs/requirements.txt
+
+      - name: Build mkdocs
+        run: |
+          mkdocs build --clean
+          mkdocs --version
+
+      - name: Publish to Cloudflare Pages
+        if: github.event_name == 'push' && contains(fromJson('["refs/heads/master", "refs/heads/main"]'), github.ref)
+        id: cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: >
+            pages deploy site
+            --project-name=trash-guides
+            --branch=master
+            --commit-hash=${{ github.sha }}

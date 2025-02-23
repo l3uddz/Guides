@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 
-{% block content %}
-    {{ super() }}
-    <footer class="sponsorship">
-        <hr>
-        <a href="https://github.com/sponsors/TRaSH-" title="Buy me a Coffee"><img src="/img/buy-me-a-coffee.png" alt="Buy me a coffee" width="137" height="39">
-        </a>
-        <hr>
-    </footer>
+{% block announce %}
+  Docs built by Pull Request - Do not use these.
 {% endblock %}
 
+{% block content %}
+{{ super() }}
+<footer class="sponsorship">
+  <hr />
+  <a href="https://github.com/sponsors/TRaSH-" title="Buy me a Coffee"
+    ><img
+      src="/img/buy-me-a-coffee.png"
+      alt="Buy me a coffee"
+      width="137"
+      height="39"
+    />
+  </a>
+  <hr />
+</footer>
+{% endblock %}

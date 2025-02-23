@@ -1,9 +1,40 @@
 {
   "trash_id": "af94e0fe497124d1f9ce732069ec8c3b",
-  "trash_score": "1600",
+  "trash_scores": {
+    "default": 1600,
+    "anime-radarr": 150,
+    "french-multi-vf": 0
+  },
   "name": "WEB Tier 03",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
+    {
+      "name": "WEBDL",
+      "implementation": "SourceSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": 7
+      }
+    },
+    {
+      "name": "WEBRIP",
+      "implementation": "SourceSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": 8
+      }
+    },
+    {
+      "name": "BYNDR",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(BYNDR)$"
+      }
+    },
     {
       "name": "GNOMiSSiON",
       "implementation": "ReleaseGroupSpecification",
@@ -11,6 +42,24 @@
       "required": false,
       "fields": {
         "value": "^(GNOMiSSiON)$"
+      }
+    },
+    {
+      "name": "NINJACENTRAL",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(NINJACENTRAL)$"
+      }
+    },
+    {
+      "name": "NPMS",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(NPMS)$"
       }
     },
     {
@@ -47,24 +96,6 @@
       "required": false,
       "fields": {
         "value": "^(SwAgLaNdEr)$"
-      }
-    },
-    {
-      "name": "WEBDL",
-      "implementation": "SourceSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": 7
-      }
-    },
-    {
-      "name": "WEBRIP",
-      "implementation": "SourceSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": 8
       }
     }
   ]

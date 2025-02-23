@@ -1,6 +1,12 @@
-# NzbGet Scripts
+# NZBGet Scripts
 
-!!! danger "NZBGet development has been officially abandoned by the developer :bangbang:"
+!!! note "NZBGet development has been picked up again by new developers over at [github](https://github.com/nzbgetcom/nzbget){:target="\_blank" rel="noopener noreferrer"}!"
+
+A collection of community-provided and maintained scripts for NZBGet.
+
+If you have a script you want to share, don't hesitate to create a [PR](https://github.com/TRaSH-Guides/Guides/blob/master/CONTRIBUTING.md) for it.
+
+!!! warning "Because these scripts are community-provided and maintained we can't assure that they are still 100% working"
 
 ## Clean
 
@@ -48,10 +54,10 @@
 
     Install Instructions:
 
-      1. Copy script to NZBGet's script folder
-      1. Run: `sudo chmod +x replace_for.py`
-      1. In NZBGet go to `Settings` => `Extension Scripts`
-      1. Enable `replace_for.py` in the `Extensions` setting.
+        1. Copy script to NZBGet's script folder
+        1. Run: `sudo chmod +x replace_for.py`
+        1. In NZBGet go to `Settings` => `Extension Scripts`
+        1. Enable `replace_for.py` in the `Extensions` setting.
 
 ??? example "Script"
 
@@ -80,6 +86,7 @@
     ```
 
 !!! tip
+
     This script doesn't always work and is often needed if you use a certain indexer.
 
     It might be better to use the following Sonarr Regex in your release profile

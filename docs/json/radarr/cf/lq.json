@@ -1,9 +1,30 @@
 {
   "trash_id": "90a6f9a284dff5103f6346090e6280c8",
-  "trash_score": "-10000",
+  "trash_scores": {
+    "default": -10000,
+    "german": -35000
+  },
   "name": "LQ",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
+    {
+      "name": "24xHD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(24xHD)\\b"
+      }
+    },
+    {
+      "name": "41RGB",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(41RGB)$"
+      }
+    },
     {
       "name": "4K4U",
       "implementation": "ReleaseGroupSpecification",
@@ -50,6 +71,15 @@
       }
     },
     {
+      "name": "BAUCKLEY",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(BAUCKLEY)$"
+      }
+    },
+    {
       "name": "BdC",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -68,12 +98,12 @@
       }
     },
     {
-      "name": "BiTOR",
+      "name": "C1NEM4",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "^(BiTOR)$"
+        "value": "^(C1NEM4)$"
       }
     },
     {
@@ -113,6 +143,24 @@
       }
     },
     {
+      "name": "CiNE",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(CiNE)$"
+      }
+    },
+    {
+      "name": "COLLECTiVE",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(COLLECTiVE)$"
+      }
+    },
+    {
       "name": "CREATiVE24",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -128,6 +176,15 @@
       "required": false,
       "fields": {
         "value": "^(CrEwSaDe)$"
+      }
+    },
+    {
+      "name": "CTFOH",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(CTFOH)$"
       }
     },
     {
@@ -221,6 +278,15 @@
       }
     },
     {
+      "name": "GHD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(GHD)$"
+      }
+    },
+    {
       "name": "GPTHD",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -266,6 +332,15 @@
       }
     },
     {
+      "name": "iNTENSO",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(iNTENSO)$"
+      }
+    },
+    {
       "name": "iPlanet",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -275,12 +350,39 @@
       }
     },
     {
+      "name": "iVy",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(iVy)$"
+      }
+    },
+    {
+      "name": "jennaortega",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(jennaortega(UHD)?)$"
+      }
+    },
+    {
       "name": "JFF",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
         "value": "^(JFF)$"
+      }
+    },
+    {
+      "name": "KC",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(KC)$"
       }
     },
     {
@@ -344,6 +446,24 @@
       "required": false,
       "fields": {
         "value": "^(LiGaS)$"
+      }
+    },
+    {
+      "name": "LUCY",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(LUCY)$"
+      }
+    },
+    {
+      "name": "MarkII",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(MarkII)$"
       }
     },
     {
@@ -434,6 +554,24 @@
       "required": false,
       "fields": {
         "value": "^(nSD)$"
+      }
+    },
+    {
+      "name": "OFT",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(OFT)$"
+      }
+    },
+    {
+      "name": "Pahe",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "Pahe(\\.(ph|in))?\\b"
       }
     },
     {
@@ -536,6 +674,24 @@
       }
     },
     {
+      "name": "SHD",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(SHD)$"
+      }
+    },
+    {
+      "name": "ShieldBearer",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(ShieldBearer)$"
+      }
+    },
+    {
       "name": "STUTTERSHIT",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -545,12 +701,12 @@
       }
     },
     {
-      "name": "SWTYBLZ",
+      "name": "SUNSCREEN",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "^(SWTYBLZ)$"
+        "value": "^(SUNSCREEN)$"
       }
     },
     {
@@ -587,6 +743,15 @@
       "required": false,
       "fields": {
         "value": "^(TIKO)$"
+      }
+    },
+    {
+      "name": "VISIONPLUSHDR",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(VISIONPLUSHDR(-X|1000)?)$"
       }
     },
     {
@@ -631,7 +796,7 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "^(YTS)$"
+        "value": "^(YTS(.(MX|LT|AG))?)$"
       }
     },
     {

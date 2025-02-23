@@ -1,6 +1,10 @@
 {
   "trash_id": "58790d4e2fdcd9733aa7ae68ba2bb503",
-  "trash_score": "1650",
+  "trash_scores": {
+    "default": 1650,
+    "anime-sonarr": 150,
+    "french-multi-vf": 0
+  },
   "name": "WEB Tier 02",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -203,6 +207,15 @@
       }
     },
     {
+      "name": "MiU",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(MiU)$"
+      }
+    },
+    {
       "name": "MZABI",
       "implementation": "ReleaseGroupSpecification",
       "negate": false,
@@ -236,6 +249,15 @@
       "required": false,
       "fields": {
         "value": "^(orbitron)$"
+      }
+    },
+    {
+      "name": "PHOENiX",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(PHOENiX)$"
       }
     },
     {
@@ -281,6 +303,15 @@
       "required": false,
       "fields": {
         "value": "^(SA89)$"
+      }
+    },
+    {
+      "name": "SbR",
+      "implementation": "ReleaseGroupSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "^(SbR)$"
       }
     },
     {

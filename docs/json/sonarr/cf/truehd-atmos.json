@@ -1,6 +1,8 @@
 {
   "trash_id": "0d7824bb924701997f874e7ff7d4844a",
-  "trash_score": "5000",
+  "trash_scores": {
+    "default": 5000
+  },
   "name": "TrueHD ATMOS",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -10,7 +12,7 @@
       "negate": false,
       "required": true,
       "fields": {
-        "value": "True[ .-]?HD|W4NK3R|HQMUX"
+        "value": "True[ .-]?HD"
       }
     },
     {
@@ -19,7 +21,7 @@
       "negate": false,
       "required": true,
       "fields": {
-        "value": "\\b(ATMOS|CtrlHD|W4NK3R|DON)(\\b|\\d)"
+        "value": "\\bATMOS(\\b|\\d)"
       }
     },
     {
@@ -28,7 +30,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\bDD[^a-z+]|(?<!e)ac3"
+        "value": "\\bDD[^a-z+]|(?<!e-)\\b(ac-?3)\\b"
       }
     },
     {
@@ -37,7 +39,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\bDD[P+]|\\b(e[-_. ]?ac3)\\b"
+        "value": "\\bDD[P+]|\\b(e[-_. ]?ac-?3)\\b"
       }
     },
     {
@@ -55,7 +57,7 @@
       "negate": true,
       "required": true,
       "fields": {
-        "value": "\\b(dts[-_. ]?x)\\b(?!\\d)"
+        "value": "\\b(dts[-_.: ]?x7?)\\b(?![-_. ]?(26[456]))"
       }
     },
     {

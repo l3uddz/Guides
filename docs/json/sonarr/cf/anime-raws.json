@@ -1,9 +1,20 @@
 {
   "trash_id": "b4a1b3d705159cdca36d71e57ca86871",
-  "trash_score": "-10000",
+  "trash_scores": {
+    "default": -10000
+  },
   "name": "Anime Raws",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
+    {
+      "name": "AsukaRaws",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "Asuka[ ._-]?(Raws)"
+      }
+    },
     {
       "name": "Beatrice-Raws",
       "implementation": "ReleaseTitleSpecification",
@@ -20,6 +31,15 @@
       "required": false,
       "fields": {
         "value": "Daddy[ ._-]?(Raws)"
+      }
+    },
+    {
+      "name": "Fumi-Raws",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "Fumi[ ._-]?(Raws)"
       }
     },
     {
@@ -46,7 +66,16 @@
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\[km\\]|-km\\b "
+        "value": "\\[km\\]|-km\\b"
+      }
+    },
+    {
+      "name": "Koi-Raws",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "Koi[ ._-]?(Raws)"
       }
     },
     {
@@ -65,6 +94,15 @@
       "required": false,
       "fields": {
         "value": "LowPower[ ._-]?(Raws)"
+      }
+    },
+    {
+      "name": "Moozzi2",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(Moozzi2)\\b"
       }
     },
     {
@@ -95,6 +133,15 @@
       }
     },
     {
+      "name": "New-raws",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "New[ ._-]?(raws)"
+      }
+    },
+    {
       "name": "Ohys-Raws",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
@@ -122,6 +169,15 @@
       }
     },
     {
+      "name": "ReinForce",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(ReinForce)\\b"
+      }
+    },
+    {
       "name": "Scryous-Raws",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
@@ -137,6 +193,15 @@
       "required": false,
       "fields": {
         "value": "Seicher[ ._-]?(Raws)"
+      }
+    },
+    {
+      "name": "Shiniori-Raws",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "Shiniori[ ._-]?(Raws)"
       }
     }
   ]

@@ -1,6 +1,8 @@
 {
   "trash_id": "e3515e519f3b1360cbfc17651944354c",
-  "trash_score": "-10000",
+  "trash_scores": {
+    "default": -10000
+  },
   "name": "Anime LQ Groups",
   "includeCustomFormatWhenRenaming": false,
   "specifications": [
@@ -38,15 +40,6 @@
       "required": false,
       "fields": {
         "value": "\\b(A-Destiny)\\b"
-      }
-    },
-    {
-      "name": "AbemaTV",
-      "implementation": "ReleaseTitleSpecification",
-      "negate": false,
-      "required": false,
-      "fields": {
-        "value": "\\b(AbemaTV)\\b"
       }
     },
     {
@@ -137,6 +130,15 @@
       "required": false,
       "fields": {
         "value": "\\b(AnimeTR)\\b"
+      }
+    },
+    {
+      "name": "Anitsu",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(Anitsu)\\b"
       }
     },
     {
@@ -338,6 +340,15 @@
       }
     },
     {
+      "name": "Emmid",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\[Emmid\\]|-Emmid\\b"
+      }
+    },
+    {
       "name": "ExREN",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
@@ -491,12 +502,12 @@
       }
     },
     {
-      "name": "Kaerizaki-Fansub",
+      "name": "Kallango",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
-        "value": "\\b(Kaerizaki-Fansub)\\b"
+        "value": "\\[Kallango\\]|-Kallango\\b"
       }
     },
     {
@@ -524,6 +535,15 @@
       "required": false,
       "fields": {
         "value": "\\b(Kirion)\\b"
+      }
+    },
+    {
+      "name": "KQRM",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(KQRM)\\b"
       }
     },
     {
@@ -623,6 +643,15 @@
       "required": false,
       "fields": {
         "value": "\\b(MiniFreeza)\\b"
+      }
+    },
+    {
+      "name": "MiniMTBB",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(MiniMTBB)\\b"
       }
     },
     {
@@ -968,12 +997,30 @@
       }
     },
     {
+      "name": "shincaps",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(shincaps)\\b"
+      }
+    },
+    {
       "name": "SLAX",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
         "value": "\\b(SLAX)\\b"
+      }
+    },
+    {
+      "name": "Sokudo",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\[Sokudo\\]|-Sokudo\\b"
       }
     },
     {
@@ -1073,6 +1120,15 @@
       "required": false,
       "fields": {
         "value": "\\[UNBIASED\\]|-UNBIASED\\b"
+      }
+    },
+    {
+      "name": "uP",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\[uP\\]"
       }
     },
     {
